@@ -1,0 +1,41 @@
+<script>
+  function calc() {
+    const kcals = parseInt(document.getElementById("kcals").value);
+    const grams = parseInt(document.getElementById("grams").value);
+    const result = document.getElementById("result");
+    result.innerHTML = (kcals/100) * grams + " kcal";
+  }
+</script>
+<html>
+  <div class="container">
+    <div class="row">
+      <label>Kcal/100g</label>
+      <input id="kcals" type="number"></input>
+    </div>
+    <br>
+    <div class="row">
+      <label>Hur många gram:</label>
+      <input id="grams" type="number"></input>
+    </div>
+    <br>
+    <div class="row">
+      <button id="btn-calculate" onclick="calc()">Räkna ut</button>
+    </div>
+    <br>
+    <div class="row">
+      <label>Resultat:</label>
+      <text id="result"></text>
+    </div>
+  </div>
+</html>
+<style>
+  .container {
+    width: 300px;
+  }
+  .row input {
+    float: right;
+  }
+  .container button {
+    width: 300px;
+  }
+</style>
